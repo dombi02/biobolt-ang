@@ -1,0 +1,7 @@
+<div *ngIf="visible">
+    {{notFoundMessage}}
+    <a routerLink="{{resetLinkRoute}}">{{resetLinkText}}</a>
+    <div [ngStyle]="getStyles()">Vásárolj valamit!</div>
+    <div [ngClass]="getClass()">Tegyél valamit az egészségedért!</div>
+
+</div>

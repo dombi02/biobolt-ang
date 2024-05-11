@@ -1,0 +1,84 @@
+/* Reszponzív CSS */
+.main_component {
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 1%;
+    box-sizing: border-box;
+    height: 88vh;
+  }
+span{
+    margin-left: 16px;
+    font-size: medium;
+  }
+
+.forms {
+    border: 2px solid white;
+    background-color: black;
+    margin: 1.5%;
+    padding: 2%;
+  }
+.forms div{
+    margin-top: 1%;
+  }
+
+.label {
+    color: gray;
+  }
+
+ h1 span{
+    color: darkolivegreen;
+  }
+@media only screen and (min-width: 601px) {
+    .main_component {
+        width: 50% !important; 
+    }
+    
+  }
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+}
+
+.container select{
+    border-radius: 10vw 0 0 10vw;
+    border: none;
+    height: 4vw;
+    width: 28vw;
+    border: 3px groove darkolivegreen;
+    padding: 1vw;
+    font-weight: bolder;
+    font-size: medium;
+    outline: none;
+    color: darkolivegreen;
+}
+
+.container button{
+    color: darkolivegreen;
+    height: 4vw;
+    width: 15vw;
+    border-radius: 0 10vw 10vw 0;
+    border: none;
+    background-color: darkolivegreen;
+    color: white;
+    opacity: .7;
+    outline: none;
+}
+
+@media (orientation: portrait) {
+    .container select {
+        height: 8vw;
+    }
+    .container button {
+        height: 8vw;
+    }
+}
+
+.container button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+  
+  
+  

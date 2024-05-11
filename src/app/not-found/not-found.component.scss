@@ -1,0 +1,32 @@
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: xx-large;
+    font-weight: lighter;
+    height: 80vh;
+    margin-top: 5%;
+    
+}
+
+div a{
+    font-size: large;
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 10vw;
+    padding: 0.8% 1.5%;
+    margin: 2%;
+    opacity: .7;
+}
+div a:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.special {
+    color: gray;
+    font-weight: bold;
+    font-size: small;
+}
+  

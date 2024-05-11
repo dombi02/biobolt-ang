@@ -1,0 +1,21 @@
+<app-not-found [visible]="!food" notFoundMessage="Termék nem található! :(" resetLinkText="Vissza"></app-not-found>
+
+<div *ngIf="food" class="container">
+    <img [src]="food.imageUrl" [alt]="food.name">
+    <div class="details">
+        <span class="name">
+           {{food.name}} 
+        </span>
+
+        <div class="tags">
+            <app-tags [foodPageTags]="food.tags"></app-tags>
+        </div>
+
+        <div class="price">
+            <span>{{food.price}} Ft</span>
+        </div>
+
+        <button (click)="addToCart()">Hozzáadás a kosárhoz</button>
+    </div>
+
+</div>

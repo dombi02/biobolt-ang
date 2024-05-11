@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bio-angular": {
+      "hosting": {
+        "biobolt": [
+          "biobolt"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bio-angular"
+  }
+}

@@ -1,0 +1,42 @@
+<div class="main_component" *ngIf="user">
+  <h1>Üzenetek <ng-container *ngIf="user.username"><span>{{ user.username }}</span></ng-container></h1>
+  
+  <div class="container">
+    <select class="custom-select" [(ngModel)]="selectedTopic">
+      <option value="">Válassz témát...</option>
+      <option *ngFor="let topic of topics_string" [value]="topic">{{ topic }}</option>
+    </select>
+    <button (click)="searchByTopic()">Keresés</button>
+  </div>
+  
+  <ng-container *ngFor="let message of messages">
+    <div class="forms">
+      <div>
+        <span class="label">Felhasználó:</span>
+        <span>{{ message?.username }}</span>
+        <br>
+        <span class="label">Téma:</span>
+        <span>{{ message?.topic }}</span>
+      </div>
+      <div>
+        <span>{{ message?.message }}</span>
+      </div>
+    </div>
+  </ng-container>
+
+  <h2>{{ 'Mostanában írták...' | customUpperCase }}</h2>
+  <ng-container *ngFor="let msg of top_five">
+    <div class="forms">
+      <div>
+        <span class="label">Felhasználó:</span>
+        <span>{{ msg?.username }}</span>
+        <br>
+        <span class="label">Téma:</span>
+        <span>{{ msg?.topic }}</span>
+      </div>
+      <div>
+        <span>{{ msg?.message }}</span>
+      </div>
+    </div>
+  </ng-container>
+</div>

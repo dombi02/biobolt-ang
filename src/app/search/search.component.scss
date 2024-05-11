@@ -1,0 +1,44 @@
+div{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 1.5%;
+}
+
+div input{
+    border-radius: 10vw 0 0 10vw;
+    border: none;
+    height: 3vw;
+    width: 28vw;
+    border: 3px groove darkolivegreen;
+    padding: 1vw;
+    font-weight: bolder;
+    outline: none;
+    color: darkolivegreen;
+}
+
+div button{
+    color: darkolivegreen;
+    height: 3vw;
+    width: 15vw;
+    border-radius: 0 10vw 10vw 0;
+    border: none;
+    background-color: darkolivegreen;
+    color: white;
+    opacity: .7;
+    outline: none;
+}
+
+@media (orientation: portrait) {
+    div input {
+        height: 5vw;
+    }
+    div button {
+        height: 5vw;
+    }
+}
+
+div button:hover{
+    opacity: 1;
+    cursor: pointer;
+}

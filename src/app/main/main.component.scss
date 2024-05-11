@@ -1,0 +1,41 @@
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li a{
+    height: 16rem;
+    width: 16rem;
+    border: 1px solid darkolivegreen;
+    border-radius: 7% 2%;
+    margin: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+}
+
+ul li a:hover{
+    border: 7px solid lightgreen;
+    opacity: 0.88;
+    cursor: pointer;
+}
+.content {
+    position: relative;
+    border-top: 5px solid olive;
+}
+.name {
+    margin-top: 2%;
+    margin-left: 3%;
+    font-weight: bold;
+    
+}
+.price {
+    margin-right: 5%;
+    margin-top: 1%;
+    text-align: right;
+}

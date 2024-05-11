@@ -1,0 +1,23 @@
+<mat-nav-list>
+    <a mat-list-item routerLink="/" (click)="navClose()">
+        <span>BioBolt</span>
+    </a>
+    <a mat-list-item routerLink="/register" (click)="navClose()">
+        <span>Regisztráció</span>
+    </a>
+    <a mat-list-item routerLink="/login" (click)="navClose()" *ngIf="!logged">
+        <span>Bejelentkezés</span>
+    </a>
+    <a mat-list-item routerLink="/login" (click)="navClose(true)" *ngIf="logged">
+        <span>Kijelentkezés</span>
+    </a>
+    <a mat-list-item routerLink="/message-view" (click)="navClose()">
+        <span>Üzenőfal</span>
+    </a>
+    <a mat-list-item routerLink="/profile-view" (click)="navClose()">
+        <span>Profilom</span>
+    </a>
+    <a mat-list-item routerLink="/cart-page" (click)="navClose()">
+        <span>Kosár</span>
+    </a>
+</mat-nav-list>

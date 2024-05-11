@@ -1,0 +1,24 @@
+<div class="main_component" *ngIf="user">
+    <h1>A te profilod</h1>
+
+    <div class="forms">
+        
+        <label>Username:</label>
+        <input type="text" [(ngModel)]="user.username" name="username">
+        
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="user.email" name="email">
+        
+        <label>Firstname:</label>
+        <input type="text" [(ngModel)]="user.name.firstname" name="firstname">
+        
+        <label>Lastname:</label>
+        <input type="text" [(ngModel)]="user.name.lastname" name="lastname">
+    
+    </div>
+    <span>
+        <button (click)="updateUser(user)">Adatok frissítése</button>
+        <button (click)="deleteUser(user.id)">Profil törlése</button>
+    </span>
+
+</div>

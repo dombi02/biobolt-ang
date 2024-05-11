@@ -1,0 +1,72 @@
+/* Reszponzív CSS */
+.main_component {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1%;
+  box-sizing: border-box;
+  height: 88vh;
+}
+
+.forms {
+  margin-bottom: 3%;
+}
+
+label {
+  display: block;
+  margin-bottom: 2%;
+  font-size: large;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 55%;
+  padding: 2%;
+  margin-bottom: 1%;
+  box-sizing: border-box;
+  font-size: medium;
+}
+
+span {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 45%;
+}
+
+button {
+  padding:3%;
+  background-color: darkolivegreen;
+  color: white;
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 6%;
+}
+
+button:hover {
+  background-color: darkolivegreen;
+}
+
+/* Reszponzív elrendezés */
+
+/* Telefonok */
+@media only screen and (max-width: 600px) {
+  .main_component {
+      padding: 2%;
+  }
+  input[type="text"],
+  input[type="email"] {
+      padding: 1.5%;
+      margin-bottom: 2%;
+  }
+  button {
+      padding: 2% 4%;
+  }
+}
+
+/* Tablet és nagyobb */
+@media only screen and (min-width: 601px) {
+  .main_component {
+      padding: 4%;
+  }
+}

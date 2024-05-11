@@ -1,0 +1,33 @@
+<mat-sidenav-container>
+
+    <mat-sidenav #nav>
+        <app-header (onCloseSidenav)="navClosed($event, nav)" [logged]="logged_user" (log_out)="out($event)"></app-header>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar class="toolbar">
+            <div fxHide.gt-xs>
+                <button mat-icon-button (click)="clickSidenav(nav)">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div><a routerLink="/" class="logo">BioBolt</a></div>
+            <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+
+                <ul fxLayout fxLayoutGap="10px" class="nav-items">
+                    <li><a routerLink="/register" class="head-btn">Regisztráció</a></li>
+                    <li *ngIf="!(logged_user)"><a routerLink="/login" class="head-btn">Bejelentkezés</a></li>
+                    <li *ngIf="logged_user"><a routerLink="/login" class="head-btn" (click)="out()">Kijelentkezés</a></li>
+                    <li><a routerLink="/message-view">Üzenőfal</a></li>
+                    <li><a routerLink="/profile-view">Profilom</a></li>
+                    <li><a routerLink="/cart-page">Kosár</a></li>
+                </ul>
+            </div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+        
+    </mat-sidenav-content>
+
+    
+</mat-sidenav-container>
+

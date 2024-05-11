@@ -1,0 +1,49 @@
+<div class="main_component">
+  <h1>Kérlek jelentkezz be!</h1>
+  
+  <div class="forms">
+      <mat-form-field>
+        <mat-label>Add meg az email címedet!</mat-label>
+        <input matInput
+               type="email" 
+               placeholder="user123@mail.com"
+               [formControl]="user"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Add meg a jelszavadat!</mat-label>
+        <input matInput
+               type="password"
+               [formControl]="password"
+               required 
+               (keyup.enter)="login()">
+               
+      </mat-form-field>
+  </div>
+
+    
+  <span>
+    <button mat-fab extended color="accent" (click)="login()">
+      <mat-icon>login</mat-icon>
+      Mentés
+    </button>
+      
+    <button mat-fab extended color="accent" [routerLink]="'/register'">
+      <mat-icon>open_in_new</mat-icon>
+      Regisztráció
+    </button>
+  </span>
+
+  <mat-chip-set aria-label="Fish selection" class="mat_center">
+    <mat-chip>Frissesség</mat-chip>
+    <mat-chip>Vitalitás</mat-chip>
+    <mat-chip>Energia</mat-chip>
+    <mat-chip>Testmozgás</mat-chip>
+    <mat-chip>Táplálkozás</mat-chip>
+    <mat-chip>Életmód</mat-chip>
+    <mat-chip>Öröm</mat-chip>
+    <mat-chip>Fittség</mat-chip>
+    <mat-chip>Egészségmegőrzés</mat-chip>
+  </mat-chip-set>
+
+</div>

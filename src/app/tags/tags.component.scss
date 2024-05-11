@@ -1,0 +1,19 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div a{
+    background-color: darkolivegreen;
+    padding: .3vw 1.2vw;
+    margin: .1vw 1.4vw;
+    border-radius: 10vw;
+    font-weight: lighter;
+    color: white;
+    opacity: .7;
+}
+
+div a:hover{
+    opacity: 1;
+}
